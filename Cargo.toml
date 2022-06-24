@@ -1,0 +1,19 @@
+[package]
+name = "fishy_arena"
+version = "0.1.0"
+edition = "2021"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+
+
+[dependencies]
+sdl2 = {version="0.35.2",features=["image","ttf"]}
+rand = "0.8.5"
+rodio = "0.15.0"
+retain_mut = "0.1.7"
+[profile.release]
+opt-level = "z"
+codegen-units = 1
+panic = "abort"
+lto = true
